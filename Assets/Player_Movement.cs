@@ -32,6 +32,7 @@ public class Player_Movement : MonoBehaviour
             {
                 targetTime = 0.0f;
                 Debug.Log("tired");
+                playerspeed = 3f;
             }
         }
         else if (sprinter == false)
@@ -46,3 +47,5 @@ public class Player_Movement : MonoBehaviour
         }
     }
 }
+
+        
