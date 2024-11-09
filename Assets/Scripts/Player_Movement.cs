@@ -48,7 +48,7 @@ public CharacterController controller;
             if (targetTime >= stamina)
             {
                 isExhausted = false;
-                Debug.Log("Stamina full");
+                //Debug.Log("Stamina full");
             }
         }
 
