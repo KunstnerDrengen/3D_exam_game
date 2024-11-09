@@ -18,5 +18,16 @@ public class Timerbar : MonoBehaviour
     void Update()
     {
         timerBar.fillAmount = Playermov.targetTime / 5;
+
+        if (Playermov.isExhausted == true)
+        {
+            timerBar.GetComponent<Image>().color = new Color(255,0,0);
+            Debug.Log("red");
+        }
+        else
+        {
+            timerBar.GetComponent<Image>().color = new Color(0,0,0);
+            Debug.Log("blac");
+        }
     }
 } 

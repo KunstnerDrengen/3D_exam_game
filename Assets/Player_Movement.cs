@@ -6,45 +6,54 @@ using UnityEngine.Assertions.Must;
 
 public class Player_Movement : MonoBehaviour
 {
-
-    public CharacterController controller; 
-
-    public float playerspeed;
-    public float targetTime = 5.0f;
-
-    public bool tired = false;
-
-    // Update is called once per frame
+public CharacterController controller;
+    public float baseSpeed = 3f;
+    public float sprintSpeed = 6f;
+    public float stamina = 5f;      // Maximum stamina
+    public float targetTime = 5f;  // Start with full stamina
+    private float playerspeed;
+    public bool isExhausted = false; // Track if stamina is depleted
+    
     void Update()
     {
+        // Handle movement input
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        bool sprinter = Input.GetKey(KeyCode.LeftShift);
+        bool isSprinting = Input.GetKey(KeyCode.LeftShift);
+
         Vector3 move = transform.right * x + transform.forward * z;
-
-        controller.Move(move *playerspeed * Time.deltaTime);
-
-        if ((sprinter == true && targetTime > 0.0f))
+        
+        // Stamina and sprint logic
+        if (isSprinting && !isExhausted && targetTime > 0.0f)
         {
-          playerspeed = 6f;
-          targetTime -= Time.deltaTime;
-          if (targetTime <= 0)
+            playerspeed = sprintSpeed;
+            targetTime -= Time.deltaTime;  // Decrease stamina over time
+            
+            if (targetTime <= 0)
             {
-                targetTime = 0.0f;
-                Debug.Log("tired");
-                playerspeed = 3f;
+                targetTime = 0;
+                isExhausted = true; // Set to exhausted state
+                Debug.Log("Tired - Recharging Stamina");
             }
         }
-        else if (sprinter == false)
+        else
         {
-            playerspeed = 3f;
+            playerspeed = baseSpeed;
+
+            // Recover stamina over time, even if Shift is still held
             targetTime += Time.deltaTime;
-            if (targetTime >= 5)
+            targetTime = Mathf.Clamp(targetTime, 0, stamina); // Keep targetTime within stamina limits
+            
+            // Reset exhaustion if stamina fully recharged
+            if (targetTime >= stamina)
             {
-                targetTime = 5.0f;
-                Debug.Log("full");
+                isExhausted = false;
+                Debug.Log("Stamina full");
             }
         }
+
+        // Move the player
+        controller.Move(move * playerspeed * Time.deltaTime);
     }
 }
 
