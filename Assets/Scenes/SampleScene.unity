@@ -271,7 +271,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 598502846}
-  playerspeed: 12
+  playerspeed: 3
+  targetTime: 5
+  tired: 0
 --- !u!143 &598502846
 CharacterController:
   m_ObjectHideFlags: 0
