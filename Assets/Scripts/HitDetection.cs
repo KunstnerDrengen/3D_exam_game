@@ -9,6 +9,7 @@ public class HitDetection : MonoBehaviour
         if (collision.gameObject.tag == "Evil")
         {
             SceneManager.LoadScene(2);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
