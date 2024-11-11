@@ -385,6 +385,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c212ff6c582204e874c8cff348ab75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  baseSpeed: 3
+  sprintSpeed: 6
+  stamina: 5
+  targetTime: 5
+  isExhausted: 0
 --- !u!143 &598502846
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1065,6 +1071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a9f3eeb1b4cc541b4db3d4fa363bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseSens: 100
+  PlayerBody: {fileID: 1479791298}
 --- !u!114 &860757769
 MonoBehaviour:
   m_ObjectHideFlags: 0
