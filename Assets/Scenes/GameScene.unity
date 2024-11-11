@@ -310,7 +310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1367, y: 676}
+  m_AnchoredPosition: {x: 347, y: 123}
   m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243718373
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 598502851}
   m_Layer: 0
   m_Name: PLayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -385,12 +385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c212ff6c582204e874c8cff348ab75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 598502846}
-  baseSpeed: 3
-  sprintSpeed: 6
-  stamina: 5
-  targetTime: 5
-  isExhausted: 0
 --- !u!143 &598502846
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1071,8 +1065,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a9f3eeb1b4cc541b4db3d4fa363bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSens: 100
-  PlayerBody: {fileID: 598502847}
 --- !u!114 &860757769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1603,8 +1595,8 @@ Canvas:
   m_GameObject: {fileID: 1648108477}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 860757771}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
