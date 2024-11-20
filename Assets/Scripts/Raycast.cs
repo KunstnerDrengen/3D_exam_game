@@ -5,7 +5,7 @@ public class Raycast : MonoBehaviour
     public int Keyccount = 0;
     void FixedUpdate()
     {
-        bool isInteract = Input.GetKey(KeyCode.E);
+        bool isInteract = Input.GetKeyDown(KeyCode.E);
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
         RaycastHit hit;

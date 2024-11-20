@@ -1,13 +1,13 @@
-using Unity.VisualScripting;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Exittrig : MonoBehaviour
 {
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnTriggerExit(Collider other)
     {
-        Debug.Log("pik");
-        
-        //SceneManager.LoadScene(3);
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene(3);
     }
 }
