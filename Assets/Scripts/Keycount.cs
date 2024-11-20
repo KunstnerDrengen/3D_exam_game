@@ -9,9 +9,9 @@ public class DisplayInt : MonoBehaviour
 
     void Update()
     {
-        number = raycasting.Keyccount; 
-        raycasting = GetComponent<Raycast>();
-        displayText.text = number.ToString();
+         raycasting = GameObject.Find("Camera").GetComponent<Raycast>();
+         number = raycasting.Keyccount; 
+         displayText.text = number.ToString();
     }
 }
 
