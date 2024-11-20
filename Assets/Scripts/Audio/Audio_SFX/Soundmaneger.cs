@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using Unity.VisualScripting;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UIElements;
-using static UnityEditor.PlayerSettings;
 
 public class Soundmaneger : MonoBehaviour
 {   
