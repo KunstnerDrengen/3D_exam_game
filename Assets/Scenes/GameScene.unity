@@ -777,6 +777,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466654431}
+  - component: {fileID: 466654433}
+  - component: {fileID: 466654432}
   m_Layer: 0
   m_Name: SFXmanager
   m_TagString: Untagged
@@ -799,6 +801,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &466654432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466654430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77b75b688230e84aa7cc3430f1e1bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxLibrary: {fileID: 466654433}
+--- !u!114 &466654433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466654430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b4b51404fa1a44a9da271424cd2ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundSFX:
+  - groupID: ScaryStart
+    clips:
+    - {fileID: 8300000, guid: 08880b28e5429c24f89034933a3e3526, type: 3}
+    Soundtarget: {fileID: 598502844}
+  - groupID: Jumpscare
+    clips:
+    - {fileID: 8300000, guid: c31bf40269b426b448c0deeec032c193, type: 3}
+    Soundtarget: {fileID: 275389086}
+  Mixergroup: {fileID: 0}
 --- !u!1 &583051162 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5419470fbc2379e42b4adaf2cdde2566, type: 3}
@@ -2540,8 +2577,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Exit: {fileID: 403264235}
+  Evil: {fileID: 716558215}
   number: 0
   displayText: {fileID: 1256391366}
+  brek: 0
 --- !u!1 &1820087162 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 60715595d2d0d314088a2d4b149d3a2c, type: 3}

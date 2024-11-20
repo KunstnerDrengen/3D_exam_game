@@ -24,6 +24,7 @@ public class HitDetection : MonoBehaviour
 
     private IEnumerator Jumpscare()
     {
+        Soundmaneger.Instance_sound.playclips("Jumpscare", transform.position);
         Destroy(panel);
         cam1.enabled = true;
         cam2.enabled = false;
