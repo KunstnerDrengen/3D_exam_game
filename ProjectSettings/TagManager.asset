@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Flashlight
   - Evil
+  - Key
   layers:
   - Default
   - TransparentFX
