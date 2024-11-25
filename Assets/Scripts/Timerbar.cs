@@ -10,7 +10,7 @@ public class Timerbar : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Playermov = GameObject.Find("PLayer").GetComponent<Player_Movement>();
+        Playermov = GameObject.Find("Player").GetComponent<Player_Movement>();
         timerBar = GetComponent<Image>();
     }
 

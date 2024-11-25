@@ -64,7 +64,7 @@ public class HitDetection : MonoBehaviour
         Jumpscareanim = true;
         if (stop == false)
         {
-            Soundmaneger.Instance_sound.playclips("Jumpscare", transform.position);
+            Soundmaneger.Instance_sound.playclips("Jumpscare_Gold", transform.position);
             stop = true;
         }
         Destroy(panel);

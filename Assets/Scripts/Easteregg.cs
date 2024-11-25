@@ -25,6 +25,7 @@ public class Easteregg : MonoBehaviour
         {
             Easteractive = true; 
             GoldenBonko.SetActive(true); 
+            Soundmaneger.Instance_sound.playclips("Goldstatic", transform.position);
         }
         
     }
