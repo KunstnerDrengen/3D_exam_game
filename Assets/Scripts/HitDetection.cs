@@ -22,10 +22,11 @@ public class HitDetection : MonoBehaviour
         stop = false;
     }
 
-    private void Update()
+    public void Update()
     {
         Easters = GameObject.Find("Easteregg").GetComponent<Easteregg>();
     }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Evil")
@@ -55,7 +56,7 @@ public class HitDetection : MonoBehaviour
         cam1.enabled = true;
         cam2.enabled = false;
         Easter.enabled = false;
-        yield return new WaitForSeconds(5); 
+        yield return new WaitForSeconds(2); 
         SceneManager.LoadScene(2);
     }
 
