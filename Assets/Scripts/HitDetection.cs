@@ -56,7 +56,7 @@ public class HitDetection : MonoBehaviour
         cam1.enabled = true;
         cam2.enabled = false;
         Easter.enabled = false;
-        yield return new WaitForSeconds(2); 
+        yield return new WaitForSeconds(7); 
         SceneManager.LoadScene(2);
     }
 
