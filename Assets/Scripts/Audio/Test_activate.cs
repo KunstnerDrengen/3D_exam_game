@@ -6,7 +6,7 @@ public class testerin : MonoBehaviour
 {
     void Start()
     {
-        //FindObjectOfType<Audionew>().Play("Music");
+        FindObjectOfType<Audionew>().Play("scarys");
     }
 
     void Update()

@@ -6824,6 +6824,57 @@ PrefabInstance:
       addedObject: {fileID: 1951813876}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a047eea78240c4840b612410f0543428, type: 3}
+--- !u!1 &1026355048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026355051}
+  - component: {fileID: 1026355050}
+  m_Layer: 0
+  m_Name: Audioman
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1026355050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026355048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e840a7c8dca2c2543b860cf402ed3107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: scarys
+    clip: {fileID: 8300000, guid: 214590eb63da45e438e03ddde83fcedf, type: 3}
+    volume: 0.8
+    pitch: 1
+    audiosouz: {fileID: 0}
+    Mixergroup: {fileID: 0}
+--- !u!4 &1026355051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026355048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.845445, y: -23.025564, z: 14.275531}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1041096910
 Mesh:
   m_ObjectHideFlags: 0
@@ -10844,6 +10895,7 @@ SceneRoots:
   - {fileID: 188722485}
   - {fileID: 65248974}
   - {fileID: 4385730954183732447}
+  - {fileID: 1026355051}
   - {fileID: 1421255917}
   - {fileID: 2020015973}
   - {fileID: 1151520586}

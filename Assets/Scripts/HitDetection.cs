@@ -20,6 +20,8 @@ public class HitDetection : MonoBehaviour
         cam1.enabled = false;
         cam2.enabled = true;
         stop = false;
+        FindObjectOfType<Audionew>().Play("scarys");
+
     }
 
     public void Update()
