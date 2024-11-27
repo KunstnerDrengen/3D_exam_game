@@ -5213,13 +5213,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709189547}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08350704, y: 0.3227783, z: -0.026975168, w: 0.9423976}
-  m_LocalPosition: {x: -5.970004, y: 1.6000003, z: -6.4300017}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.3900064, y: 8.850001, z: 0.7999992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1432360340}
-  m_LocalEulerAnglesHint: {x: 10.067, y: 37.829, z: 0.178}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &709189549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15687,7 +15687,7 @@ MonoBehaviour:
   m_Text: 'FIND ALL 3 KEYS AND RETURN TO THE DOOR
 
 
-    left click to turn flashlight
+    left-click to turn flashlight
     on/off to save power'
 --- !u!222 &2073793706
 CanvasRenderer:

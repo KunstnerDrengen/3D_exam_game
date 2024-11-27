@@ -4,7 +4,6 @@ using System.Collections;
 public class Flashlight : MonoBehaviour
 {
     public Light Lighter; 
-    public Light PLayerLighter; 
     public bool toggle = false; 
 
     public float lightstamina = 120f;
@@ -14,14 +13,12 @@ public class Flashlight : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0) && toggle == false )
         {
-            PLayerLighter.enabled = true;
             Lighter.enabled = true;
             
             StartCoroutine(DelayON());
         }
         else if (Input.GetKey(KeyCode.Mouse0) && toggle == true)
         {
-            PLayerLighter.enabled = false;
             Lighter.enabled = false;
             
             StartCoroutine(DelayOFF());
@@ -30,7 +27,6 @@ public class Flashlight : MonoBehaviour
         if (Lighter.enabled == true)
         {
             lightstamina -= Time.deltaTime;
-            PLayerLighter.intensity = lightstamina / 10;
             Lighter.intensity = lightstamina / 10;
         }
     }
