@@ -29,8 +29,16 @@ public class DisplayInt : MonoBehaviour
             Evil.SetActive(true); 
         }
 
-        if (number == 3)
+        if (number == 2 && brek == true)
         {
+            brek = false;
+            Soundmaneger.Instance_sound.playclips("Scarys1", transform.position);
+        }
+
+        if (number == 3 && brek == false)
+        {
+            brek = true;
+            Soundmaneger.Instance_sound.playclips("Scarys2", transform.position);
             Exit.SetActive(true);
         }
     }

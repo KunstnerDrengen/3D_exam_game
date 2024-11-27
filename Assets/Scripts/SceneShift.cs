@@ -13,5 +13,10 @@ public class SceneShift : MonoBehaviour
   {
     SceneManager.LoadScene(0);
   }   
+
+  public void Exitgame()
+  {
+    Application.Quit(); 
+  }
 }
 
