@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections;
+using UnityEngine.SceneManagement;
 public class DisplayInt : MonoBehaviour
 {
     Raycast raycasting; 
@@ -10,6 +11,8 @@ public class DisplayInt : MonoBehaviour
     public int number; // The integer you want to display
     public Text displayText; // Reference to the Text component
 
+    public Text starttext;
+
     public bool brek = false;
 
     void Update()
@@ -17,6 +20,7 @@ public class DisplayInt : MonoBehaviour
          raycasting = GameObject.Find("Camera").GetComponent<Raycast>();
          number = raycasting.Keyccount; 
          displayText.text = number.ToString();
+         StartCoroutine("Destroytext");
 
         if (number == 1 && brek == false)
         {
@@ -31,6 +35,10 @@ public class DisplayInt : MonoBehaviour
         }
     }
 
-    
+     public IEnumerator Destroytext()
+     {
+        yield return new WaitForSeconds(10); 
+        Destroy(starttext);
+     }
 }
 
