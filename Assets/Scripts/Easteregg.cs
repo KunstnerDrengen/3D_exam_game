@@ -15,13 +15,13 @@ public class Easteregg : MonoBehaviour
     
     private void Counts()
     {
-        RandomNum = Random.Range(1, 2500);
+        RandomNum = Random.Range(1, 1000);
         Debug.Log("Random Number: " + RandomNum);
     }
 
     void Update()
     {
-        if (RandomNum == 666)
+        if (RandomNum == 666 && Easteractive == false)
         {
             Easteractive = true; 
             GoldenBonko.SetActive(true); 
@@ -29,6 +29,4 @@ public class Easteregg : MonoBehaviour
         }
         
     }
-
-
 }
