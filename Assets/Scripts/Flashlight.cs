@@ -6,7 +6,7 @@ public class Flashlight : MonoBehaviour
     public Light Lighter; 
     public bool toggle = false; 
 
-    public float lightstamina = 120f;
+    public float lightstamina = 180f;
 
     // Update is called once per frame
     void Update()
@@ -27,7 +27,7 @@ public class Flashlight : MonoBehaviour
         if (Lighter.enabled == true)
         {
             lightstamina -= Time.deltaTime;
-            Lighter.intensity = lightstamina / 10;
+            Lighter.intensity = lightstamina /10;
         }
     }
 

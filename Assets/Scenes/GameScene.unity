@@ -5065,7 +5065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lighter: {fileID: 1951813878}
   toggle: 0
-  lightstamina: 120
+  lightstamina: 180
 --- !u!114 &598502849
 MonoBehaviour:
   m_ObjectHideFlags: 0

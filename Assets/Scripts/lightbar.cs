@@ -19,7 +19,7 @@ public class lightbar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Barlig.fillAmount = flasher.lightstamina / 120f;
+        Barlig.fillAmount = flasher.lightstamina / 180f;
 
         if (flasher.lightstamina >= 80f)
         {
