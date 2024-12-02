@@ -3,14 +3,19 @@ using System.Collections;
 
 public class Flashlight : MonoBehaviour
 {
+    //ref to light
     public Light Lighter; 
+
+    //public toggle bool
     public bool toggle = false; 
 
+    //Time for the light
     public float lightstamina = 180f;
 
-    // Update is called once per frame
     void Update()
     {
+        //If mouse is clicked the light turns on and the lighttimer goes down, if not the lighttimer stops and the light is turned off
+       
         if (Input.GetKey(KeyCode.Mouse0) && toggle == false )
         {
             Lighter.enabled = true;
@@ -31,6 +36,7 @@ public class Flashlight : MonoBehaviour
         }
     }
 
+    //Delay for the flashligt, so it cant be spammed ON/OFF
     IEnumerator DelayON()
     {
         yield return new WaitForSeconds(1);

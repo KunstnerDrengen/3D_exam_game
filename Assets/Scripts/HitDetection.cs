@@ -4,33 +4,41 @@ using UnityEngine.SceneManagement;
 
 public class HitDetection : MonoBehaviour
 {
+    //Call to eastereggscript
     Easteregg Easters;
 
+    //Gameobject and camera assignments
     public GameObject panel;
     public Camera cam1;
     public Camera cam2;
     public Camera Easter;
 
+    //Stop bool to stop audio for repeating
     public bool stop;
 
+    // Jumpscare on/off
     public bool Jumpscareanim = false;
 
     private void Start()
     {
+        //Enable certain camera and setting the others false
         cam1.enabled = false;
         cam2.enabled = true;
         stop = false;
+        //PLay Scary audio from the audio manager
         FindObjectOfType<Audionew>().Play("scarys");
 
     }
 
     public void Update()
     {
+        //Get Golden grolbonko/easteregg gameobject
         Easters = GameObject.Find("Easteregg").GetComponent<Easteregg>();
     }
 
     void OnCollisionEnter(Collision collision)
     {
+        //Checks if either grolbonko or golden grolbonko hits the player, and then plays certain jumpscare
         if (collision.gameObject.tag == "Evil")
         {
             Cursor.lockState = CursorLockMode.None;
@@ -48,6 +56,7 @@ public class HitDetection : MonoBehaviour
 
     private IEnumerator Jumpscare()
     {
+        //PLays jumpscare, enables the right camera and wait for the jumpscare to end, before going to Game over screen
         Jumpscareanim = true;
         if (stop == false)
         {
@@ -64,6 +73,7 @@ public class HitDetection : MonoBehaviour
 
     private IEnumerator Jumpscare_gold()
     {
+        //PLays jumpscare, enables the right camera and wait for the jumpscare to end, before closing the game
         Jumpscareanim = true;
         if (stop == false)
         {
