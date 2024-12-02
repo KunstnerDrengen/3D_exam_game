@@ -5,20 +5,23 @@ using UnityEngine.UI;
 
 public class lightbar : MonoBehaviour
 {
+    //Gets flashlight
     Flashlight flasher;
+    //Gets bar image
     public Image Barlig;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //Gets components
         flasher = GameObject.Find("Player").GetComponent<Flashlight>();
         Barlig = GetComponent<Image>();
         
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //Depending on the amount of light left, the bar changes colour
         Barlig.fillAmount = flasher.lightstamina / 180f;
 
         if (flasher.lightstamina >= 80f)
