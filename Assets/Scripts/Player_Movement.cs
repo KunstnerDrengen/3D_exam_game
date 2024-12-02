@@ -6,21 +6,32 @@ using UnityEngine.Assertions.Must;
 
 public class Player_Movement : MonoBehaviour
 {
-public CharacterController controller;
+    public CharacterController controller;
+    //Speed for player
     public float baseSpeed = 3f;
+    //Sprintspeed for player
     public float sprintSpeed = 6f;
-    public float stamina = 5f;      // Maximum stamina
-    public float targetTime = 5f;  // Start with full stamina
+    // Maximum stamina
+    public float stamina = 5f;
+    // Start with full stamina
+    public float targetTime = 5f; 
+    //Playerspeed float
     private float playerspeed;
-    public bool isExhausted = false; // Track if stamina is depleted
+    // Track if stamina is depleted
+    public bool isExhausted = false; 
     
     void Update()
     {
-        // Handle movement input
+        // Handle movement input. gets x and y axis
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+
+        //Chat gpt used for A PART of this section
+
+        //bool for when Sprint is on 
         bool isSprinting = Input.GetKey(KeyCode.LeftShift);
 
+        //Movement for player
         Vector3 move = transform.right * x + transform.forward * z;
         
         // Stamina and sprint logic

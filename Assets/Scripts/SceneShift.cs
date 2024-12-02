@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneShift : MonoBehaviour
 {
-    
+  
+    //changes scenes between Home and game. Also exits the application 
   public void Gamescene()
   {
     SceneManager.LoadScene(1);

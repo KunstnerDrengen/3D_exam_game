@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Timerbar : MonoBehaviour
 {
+    //Get playermov script
     Player_Movement Playermov;
+    //Get timerbar image
     public Image timerBar;
 
-    
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //Get playercomponent and timerbar image
     void Start()
     {
         Playermov = GameObject.Find("Player").GetComponent<Player_Movement>();
@@ -18,12 +18,12 @@ public class Timerbar : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // Fillamount on timerbar, depending on the sprinttimer from another script
         timerBar.fillAmount = Playermov.targetTime / 5;
         
-
+        //Changes the bars color depending on how much time is left
         if (Playermov.isExhausted == true)
         {
             timerBar.GetComponent<Image>().color = new Color(255,0,0);
